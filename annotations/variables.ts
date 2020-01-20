@@ -29,3 +29,10 @@ let point: {x:number; y: number} = {
     x: 10,
     y: 20
 };
+
+//function
+//here we define what we expect the input param types to be and the output
+//we expect param to be i type number and to return void
+const logNumber: (i: number) => void = (i: number) => {
+    console.log(i)
+}
