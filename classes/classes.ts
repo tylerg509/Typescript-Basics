@@ -2,36 +2,47 @@
 //class name should be capitalized
 //public is default
 class Vehicle {
-    ////if you delcare private as public it must be public in child classes if you are overriding in the child class
-    // private drive(): void{
-    //     console.log('chugga chugga')
-    // }
-    public honk():void{
+    //protected can only be called by child class
+    protected honk():void{
         console.log('beep')
+    }
+    public soundAlarm(): void{
+        console.log('beep beep beep')
+    }
+    public turn():void{
+        console.log('turning')
     }
 }
 
 //use extends to inherit from vehicle
 //base inheritance in TS!
-class Car extends Vehicle {     
+class Car extends Vehicle {   
+      
     //override drive method in vehicle = polymorphism!
     private drive(): void{
         console.log('vroom')
     }
 
+    //overriding example
+    public turn():void{
+        console.log('cannot turn sorry')
+    }
+
     startDrivingProcess(): void {
         this.drive()
+        //call method on base class
+        this.honk()
     }
 }
 
 const vehicle = new Vehicle();
 // vehicle.drive()
-vehicle.honk()
-
+vehicle.soundAlarm()
+vehicle.turn()
 
 const car = new Car();
 car.startDrivingProcess()
-car.honk()
+car.turn()
 
 
 
