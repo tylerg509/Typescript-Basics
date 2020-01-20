@@ -44,3 +44,10 @@ INTERFACES IN TS
 Reusable code in TS = Create functions that accept arguments that are types with interfaces
 Reusable code in TS = Objects/classes can decide to implement a given interface to work with a function
 
+
+--
+Instance method modifiers in TS == encapsulation!
+public = method can be called anywhere 
+private = method can only be called by other methods in this class
+protected = method can be called by other methods in this class OR by other methods in child classes
+
