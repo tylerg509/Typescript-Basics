@@ -36,11 +36,13 @@ const throwError = (message: string): never => {
     throw new Error(message)
 }
 
+//object to be passed into function
 const todaysWeather = {
     date: new Date(),
     weather: 'sunny'
 }
 
+//function that takes in date and weather
 const logWeather = (forecast: {date: Date, weather: string}): void => {
     console.log(forecast.date);
     console.log(forecast.weather);
