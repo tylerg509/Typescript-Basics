@@ -2,20 +2,25 @@
 
 //interface should have capital name by convention
 //name should be broad
+//you can any type to an interface = not limited to primaritve types - not how we assign date
 interface Vehicle{
     name: string;
-    year: number;
+    year: Date;
     broken: boolean;
+    summary(): string;
 }
 
 const oldCivic = {
     name: 'civic',
-    year: 2000,
-    broken: true
+    year: new Date(),
+    broken: true,
+    summary(): string {
+        return `Name: ${this.name}`
+    }
 }
 
 //since the param type annoation is very long we should implement an interface
-const printVehicle = (vehicle: {name: string; year: number; broken: boolean}): void => {
+const printVehicle = (vehicle: {name: string; year: Date; broken: boolean; summary: ()=>string}): void => {
     console.log(`Name: ${vehicle.name}`)
     console.log(`Year: ${vehicle.year}`)
     console.log(`Broken: ${vehicle.broken}`)
