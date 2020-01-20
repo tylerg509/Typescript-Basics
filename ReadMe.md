@@ -29,5 +29,12 @@ What type of values it will return
 
 Type inference for functiosn = TS tried to figure out what type of value a funciton will return only
 
+
+ARRAYS in TS
 Typed arrays = same as JS. In TS all items in the array must be of the same type
+
+TS can do type inference when extracting values from arrays
+Ts can prevent us from adding incompativle values to arrays
+We can get help with map forEach reduce functions
+Flexible  arrays can still contain multiple different types
 
