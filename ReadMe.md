@@ -10,3 +10,10 @@ Types:
 Type annotation = code we add to tell typescript what type of value a variable will refer to
 
 Type inference = typescript tries to figure out what type of value a variable refers to 
+
+In general rely on type inference
+Three instances where we use type annotation:
+a) When a function returns that any type and we need to clarify the value
+
+
+AVOID TYPE ANY AT ALL COSTS = defeats purpose of ts.

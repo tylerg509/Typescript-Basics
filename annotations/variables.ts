@@ -1,4 +1,8 @@
 
+
+//note we do not need the annotations we could remove number from apples and typescript would infer the type = type inference
+
+
 //common
 let apples: number = 5;
 let speed: string = 'fast'
@@ -36,3 +40,20 @@ let point: {x:number; y: number} = {
 const logNumber: (i: number) => void = (i: number) => {
     console.log(i)
 }
+
+
+//when to use annoations
+// a) we have a function that returns the any type
+const json = '{"x": 10, "y": 20}';
+const coordinates = JSON.parse(json); //note that typescript thinks that coordinates and json.parase are returning type any
+console.log(coordinates) 
+
+//fix the abovve
+const json2 = '{"x": 10, "y": 20}';
+//since json.parse returns type any we need to add type annotation for coordinates: x and y
+//coordinates was of type and but now we can see that it is contains an object x and y and x and y are of type number
+const coordinates2: {x: number; y:number} = JSON.parse(json2); 
+console.log(coordinates2) 
+
+
+
