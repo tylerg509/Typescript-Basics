@@ -28,3 +28,6 @@ Type annotations for functions = code we add to tell TS what type of arguments a
 What type of values it will return
 
 Type inference for functiosn = TS tried to figure out what type of value a funciton will return only
+
+Typed arrays = same as JS. In TS all items in the array must be of the same type
+
