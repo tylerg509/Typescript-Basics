@@ -15,3 +15,23 @@ const add = (a: number, b: number): number => {
 const subtract = (a: number, b: number): number => {
     return a-b;
 }
+
+function divide(a: number, b: number): number{
+    return a/b
+}
+
+const multiply = function(a:number, b:number): number{
+    return a*b 
+}
+
+//void can return null or undefined
+const logger = (message: string): void => {
+    console.log(message)
+}
+
+//you will never return anything . you will never reach the end of the function 
+//in this case you would exit function early
+//this really nevery happens and shouldnt really ever be needed
+const throwError = (message: string): never => {
+    throw new Error(message)
+}
