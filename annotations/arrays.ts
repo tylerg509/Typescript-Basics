@@ -33,3 +33,18 @@ carMakers.push('199');
 carMakers.map((car: string): string => {
     return car.toUpperCase();
 })
+
+//flexible types
+//important dates is stirng or date
+const importantDates = [new Date(), '2030-10-10'];
+
+//cant push things other than date or string
+const importantDates2: (Date | string)[] = [new Date()];
+importantDates2.push('2030-10-10')
+importantDates2.push(new Date())
+
+//if initializing empyty 
+const importantDates3: (Date | string)[] = [];
+
+
+//we use typed arraays any time we need to represent a collection of records with some arbitrary sort order

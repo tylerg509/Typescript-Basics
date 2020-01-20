@@ -38,3 +38,4 @@ Ts can prevent us from adding incompativle values to arrays
 We can get help with map forEach reduce functions
 Flexible  arrays can still contain multiple different types
 
+We use typed arraays any time we need to represent a collection of records with some arbitrary sort order
