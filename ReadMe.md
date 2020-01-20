@@ -21,3 +21,10 @@ b) When we declare a variable on one line and initalize it later (see variables.
 c) When we want a variable to have a type that can't be inferred (see variables.ts)
 
 AVOID TYPE ANY AT ALL COSTS = defeats purpose of ts.
+
+
+
+Type annotations for functions = code we add to tell TS what type of arguments and functions will receive and 
+What type of values it will return
+
+Type inference for functiosn = TS tried to figure out what type of value a funciton will return only
