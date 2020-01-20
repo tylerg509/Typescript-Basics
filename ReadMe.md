@@ -17,7 +17,7 @@ Type inference = typescript tries to figure out what type of value a variable re
 In general rely on type inference
 Three instances where we use type annotation:
 a) When a function returns that any type and we need to clarify the value (see variables.ts)
-b) when we declare a variable on one line and initalize it later (see variables.ts)
-c)  ß(see variables.ts)
+b) When we declare a variable on one line and initalize it later (see variables.ts)
+c) When we want a variable to have a type that can't be inferred (see variables.ts)
 
 AVOID TYPE ANY AT ALL COSTS = defeats purpose of ts.

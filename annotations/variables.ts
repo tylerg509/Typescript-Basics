@@ -69,3 +69,31 @@ for (let i = 0; i < words2.length; i++) {
     foundWord2 = true;
   }
 }
+
+
+//c) When we want a variable to have a type that can't be inferred
+let numbers = [-10, -1, 12]
+let numberAboveZero = false;
+
+////if you comment out the below you see that numberAboveZero erros out since we try to assign number to the variable == intended
+//// ps this not a good idea
+
+// for  (let i = 0; i < numbers.length; i++){
+//     if(numbers[i] > 0){
+//         numberAboveZero = numbers[i];
+//     }
+// }
+
+
+let numbers2 = [-10, -1, 12]
+//to fix the above we use type annoation and OR | to assign to type boolean or number
+let numberAboveZero2: boolean | number = false; 
+
+//if you comment out the below you see that numberAboveZero erros out since we try to assign number to the variable == intended
+// ps this not a good idea
+
+for  (let i = 0; i < numbers2.length; i++){
+    if(numbers2[i] > 0){
+        numberAboveZero2 = numbers2[i];
+    }
+}
