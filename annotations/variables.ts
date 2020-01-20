@@ -17,9 +17,7 @@ let myNumbers: number[] = [1,2,3]
 let truths: boolean[] = [true, true, false]
 
 //classes
-class Car {
-    
-}
+class Car {}
 
 //upper C referring to object class Car
 //car is a variable of type Car
