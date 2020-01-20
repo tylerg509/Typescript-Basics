@@ -2,17 +2,6 @@
 //class name should be capitalized
 //public is default
 class Vehicle2 {
-    // //use constructor instead of initializing the color property
-    // color:string;
-
-    // //color: string = 'red'; //when we say red we initalize the color property
-
-    // constructor(color: string){
-    //     this.color = color
-    // }
-
-    //instead of the above we can use an access modifier on color 
-    //could use private or protected
     constructor(public color: string){
 
     }
@@ -44,7 +33,6 @@ const vehicle2 = new Vehicle2('orange');
 console.log(vehicle2.color)
 
 
-
-
-
-
+//when we create instance of car the consturctor in vechincle gets called so we must pass color
+const car2 = new Car2('red')
+console.log(car2.color)
