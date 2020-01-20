@@ -20,7 +20,8 @@ const profile = {
 
 //destructure age and write out the expected structured = age:number
 //note this is only if required based on our three scenarios
-const {age, name}: {age:number, name: string} = profile; //name red but thas ok
+const {age}: {age:number} = profile; //name red but thas ok
+//const {age, name}: {age:number, name: string} = profile; //name red but thas ok
 //const {age} = profile might be accesptable if this does not fall in our three categories of having to use type annotations
 
 //if required in our three scenarios
