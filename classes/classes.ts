@@ -1,7 +1,7 @@
 
 //class name should be capitalized
 //public is default
-class Vehicle {
+class Vehicle1 {
     //protected can only be called by child class
     protected honk():void{
         console.log('beep')
@@ -16,7 +16,7 @@ class Vehicle {
 
 //use extends to inherit from vehicle
 //base inheritance in TS!
-class Car extends Vehicle {   
+class Car extends Vehicle1 {   
       
     //override drive method in vehicle = polymorphism!
     private drive(): void{
@@ -35,7 +35,7 @@ class Car extends Vehicle {
     }
 }
 
-const vehicle = new Vehicle();
+const vehicle = new Vehicle1();
 // vehicle.drive()
 vehicle.soundAlarm()
 vehicle.turn()
