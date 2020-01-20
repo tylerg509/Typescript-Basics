@@ -11,9 +11,13 @@ Type annotation = code we add to tell typescript what type of value a variable w
 
 Type inference = typescript tries to figure out what type of value a variable refers to 
 
+    Type inference only works when we have variable declaration and variable initalization on the same line for ex the following would work:
+    - const color = 'red'
+
 In general rely on type inference
 Three instances where we use type annotation:
-a) When a function returns that any type and we need to clarify the value
-
+a) When a function returns that any type and we need to clarify the value (see variables.ts)
+b) when we declare a variable on one line and initalize it later (see variables.ts)
+c)  ß(see variables.ts)
 
 AVOID TYPE ANY AT ALL COSTS = defeats purpose of ts.
