@@ -1,30 +1,24 @@
-import axios from 'axios'
+class ArrayOfNumbers{
+    constructor(public collection: number[]){}
 
-const url = 'https://jsonplaceholder.typicode.com/todos/1'
-
-axios.get(url).then(response => {
-    interface Todo {
-        id: number;
-        title: string;
-        completed: boolean;
+    get(index: number): number{
+        return this.collection[index];
     }
+}
 
-    console.log(response)
-    //response.data has properties of //id //title/ completed
-    const todo = response.data as Todo;
-    const id = todo.id;
-    const title = todo.title;
-    const completed = todo.completed
+class ArrayOfStrings{
+    constructor(public collection: string[]){}
 
-    logTodo(id, title, completed)
+    get(index: number): string{
+        return this.collection[index]
+    } 
+}
 
-})
+//since the above methods are exactly the same we can use generics
+class ArrayOfAnything<T>{
+    constructor(public collection: T[]){}
 
-
-const logTodo = (id: number, title:string, completed: boolean) => {
-    console.log(`
-        The Todo with ID: ${id}
-        Has a title of: ${title}
-        Is it finished:  ${completed}
-    `)
+    get(index: number): T{
+        return this.collection[index]
+    }
 }
