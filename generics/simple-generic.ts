@@ -58,3 +58,31 @@ function printAnything<T>(arr: T[]): void{
 printAnything([1,2,3,4])
 printAnything(['1','2','3'])
 
+//generic constraints
+class Car {
+    print(){
+        console.log('I am a car');
+    }
+}
+
+class House{
+    print(){
+        console.log('I am a house')
+    }
+}
+
+interface Printable{
+    print(): void;
+}
+
+//we used extends printable to promise that printable will implement print
+//interface helps to define the generic type. This makes it so we can call print on arr
+function printHousesOrCars<T extends Printable>(arr: T[]): void{
+    arr.forEach(item=>{
+        item.print()
+    })
+}
+
+
+printHousesOrCars<House>([new House(), new House()])
+printHousesOrCars<Car>([new Car(), new Car()])
