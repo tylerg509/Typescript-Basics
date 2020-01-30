@@ -31,4 +31,30 @@ new ArrayOfAnything<number>([1,2,3])
 const arrStr = new ArrayOfAnything(['a','b','c'])
 const arrNum = new ArrayOfAnything<number>([1,2,3])
 
+//example of generics with functions
+function printStrings(arr: string[]): void {
+    arr.forEach(item =>{
+        console.log(item)
+    })
+
+}
+
+function printNumbers(arr: number[]): void{
+    arr.forEach(item =>{
+        console.log(item)
+    })
+}
+
+
+//since the above two do the same thing we can use generics!
+function printAnything<T>(arr: T[]): void{
+    arr.forEach(item=>{
+        console.log(item)
+    })
+}
+
+//type inference says we dont have to pass the type
+//hover over the method and you can see that typescipt adds the type back in
+printAnything([1,2,3,4])
+printAnything(['1','2','3'])
 
